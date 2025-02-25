@@ -39,8 +39,8 @@ links = ["https://imsdb.com/scripts/Batman.html",
 "https://imsdb.com/scripts/Blade-Runner.html",
 "https://imsdb.com/scripts/Blade-Trinity.html"]
 data = []
-for i in range(len(links)):
-    response = requests.get(links[i])
+for i in range(len(movielinks)):
+    response = requests.get(movielinks[i])
     soup = BeautifulSoup(response.text, "html.parser")
     element = soup.find(class_='scrtext').get_text()
     data.append(element)
